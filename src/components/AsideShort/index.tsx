@@ -1,6 +1,6 @@
 import { Container } from './styles'
 
-import logoImg from '../../assets/fullLogo.svg'
+import logoImg from '../../assets/logo.svg'
 import chartIcon from '../../assets/chart.svg'
 import shovelIcon from '../../assets/shovel.svg'
 import targetIcon from '../../assets/target.svg'
@@ -10,7 +10,7 @@ import billIcon from '../../assets/bill.svg'
 import cogIcon from '../../assets/cog.svg'
 import signOutIcon from '../../assets/signOut.svg'
 
-export function Aside() {
+export function AsideShort() {
   return (
     <Container>
       <img src={logoImg} alt='Paytient' />

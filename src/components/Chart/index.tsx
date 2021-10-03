@@ -1,82 +1,24 @@
 import { Container } from './styles'
 
 import {
-  LineChart,
   Line,
   XAxis,
   YAxis,
+  LineChart,
+  CartesianGrid,
   ResponsiveContainer
 } from "recharts"
+import { FaDollarSign } from 'react-icons/fa'
 
-const data = [
-  {
-    name: "01",
-    rev: 290,
-    cost: 200
-  },
-  {
-    name: "02",
-    rev: 200,
-    cost: 40
-  },
-  {
-    name: "03",
-    rev: 290,
-    cost: 200
-  },
-  {
-    name: "04",
-    rev: 200,
-    cost: 40
-  },
-  {
-    name: "05",
-    rev: 290,
-    cost: 375
-  },
-  {
-    name: "06",
-    rev: 110,
-    cost: 290
-  },
-  {
-    name: "07",
-    rev: 380,
-    cost: 110
-  },
-  {
-    name: "08",
-    rev: 295,
-    cost: 290
-  },
-  {
-    name: "09",
-    rev: 375,
-    cost: 40
-  },
-  {
-    name: "10",
-    rev: 200,
-    cost: 380
-  },
-  {
-    name: "11",
-    rev: 290,
-    cost: 200
-  },
-  {
-    name: "12",
-    rev: 200,
-    cost: 290
-  },
-];
+import { chatData } from '../../utils/chartData'
 
-export default function Chart() {
+export function Chart() {
   return (
     <Container>
 
       <div className='chart-header'>
         <div>
+          <FaDollarSign />
           <p>Faturamento vs Custo Fixo</p>
         </div>
 
@@ -95,16 +37,31 @@ export default function Chart() {
       </div>
 
       <ResponsiveContainer width='100%' height='75%'>
-        <LineChart data={data}>
-          <XAxis dataKey="name" />
-          <YAxis domain={[0, 400]} />
+        <LineChart data={chatData}>
+          <CartesianGrid vertical={false} />
+
+          <XAxis
+            dataKey="name"
+            axisLine={false}
+            tickLine={false}
+            tickSize={20}
+          />
+
+          <YAxis
+            dataKey="rev"
+            domain={[0, 400]}
+            axisLine={false}
+            tickLine={false}
+          />
 
           <Line
             type="monotone"
             dataKey="cost"
             dot={false}
             strokeWidth={3}
-            stroke="#f00"
+            stroke="#F00"
+            animationEasing='ease-in-out'
+            animationDuration={2000}
           />
 
           <Line
@@ -112,7 +69,9 @@ export default function Chart() {
             dataKey="rev"
             dot={false}
             strokeWidth={3}
-            stroke="green"
+            stroke="#00FF63"
+            animationEasing='ease-in-out'
+            animationDuration={2000}
           />
         </LineChart>
       </ResponsiveContainer>

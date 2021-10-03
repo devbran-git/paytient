@@ -1,9 +1,15 @@
 import { Container } from './styles'
 
+import {
+  FaSortUp,
+  FaRegUser,
+  FaSortDown,
+  FaDollarSign,
+  FaExchangeAlt,
+} from 'react-icons/fa'
 import { HiOutlineShoppingCart } from 'react-icons/hi'
-import { FaSortUp, FaSortDown, FaDollarSign, FaExchangeAlt, FaRegUser } from 'react-icons/fa'
 
-export function DashboardCards() {
+export function Summary() {
   return (
     <Container>
       <div className='cards-wrapper'>

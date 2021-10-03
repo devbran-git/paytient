@@ -15,6 +15,13 @@ export const Container = styled.div`
     align-items: center;
     justify-content: space-between;
 
+    svg {
+      font-size: 1rem;
+      color: var(--green);
+
+      margin-right: .5rem;
+    }
+
     &.chart-header {
       margin-bottom: 2.5rem;
     }
@@ -23,7 +30,7 @@ export const Container = styled.div`
       font-size: 1rem;
       font-weight: 600;
 
-      opacity: .5;
+      opacity: .5;     
     }
 
     &.legend-box {

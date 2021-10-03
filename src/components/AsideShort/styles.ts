@@ -4,7 +4,7 @@ export const Container = styled.aside`
 display: flex;
 flex-direction: column;
 
-padding-right: 3rem;
+width: 5.5rem;
 
 background: var(--shape);
 box-shadow: 20px 25px 40px 0 rgba(35, 38, 90, 0.06);
@@ -12,14 +12,15 @@ box-shadow: 20px 25px 40px 0 rgba(35, 38, 90, 0.06);
 padding-left: 2rem;
 
 img {
-  width: 7rem;
-  height: 3rem;
+  width: 1.90rem;
+  height: 1.95rem;
   
-margin-top: 0.5rem;
+  margin-top: 1rem;
+  margin-right: 2rem;
 }
 
 a { 
-  text-decoration: none;
+  display: none;
 }
 
 nav {
@@ -36,19 +37,13 @@ nav {
       align-items: center;
       
       list-style: none;
-      font-size: 0.87rem;
-      font-weight: 600;
-      
+            
       opacity: 0.5;
       
       &:hover {
         filter: brightness(.1);
       }
-      
-      &:first-child {
-        opacity: 1;
-      }
-      
+           
       img {
         width: 1rem;
         height: 1rem;

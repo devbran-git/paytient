@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 
 export const Container = styled.header`
-  height: 9vh;
+  height: 3.87rem;
+  width: 100%;
+
   display: flex;
   align-items: center;
 
@@ -17,8 +19,8 @@ export const Logo = styled.div`
   justify-content: center;
   
   img {
-    max-width: 7rem;
-    max-height: 3rem;
+    width: 7rem;
+    height: 3rem;
   }
 `
 
@@ -28,7 +30,12 @@ export const HeaderMain = styled.div`
   justify-content: space-between;
   flex: 1;
 
-  padding: 0 2rem;
+  padding: 0 1.5rem;
+
+  button {
+    border: 0;
+    background: var(--shape);
+  }
 
   svg {
     font-size: 1.25rem;

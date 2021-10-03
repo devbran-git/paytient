@@ -1,24 +1,30 @@
-import { Container, Logo, HeaderMain } from './styles'
+import { Container, HeaderMain } from './styles'
 
-import logoImg from '../../assets/fullLogo.svg'
 import profileImg from '../../assets/profile.png'
 import { CgMenu } from "react-icons/cg"
 import { ActivityIcons } from '../ActivityIcons'
 
 
-export function Header() {
+import { TypeProps } from '../Content'
+
+interface HandlesProps extends Partial<TypeProps> {
+  handleToggleMenu: () => void
+  handleProfileOptions: () => void
+}
+
+export function Header({ handleToggleMenu, handleProfileOptions }: HandlesProps) {
   return (
     <Container>
-      <Logo>
-        <img src={logoImg} alt='Paytient' />
-      </Logo>
-
       <HeaderMain>
-        <CgMenu size={21} />
+        <button onClick={handleToggleMenu}>
+          <CgMenu size={21} />
+        </button>
 
         <div>
           <ActivityIcons />
-          <img src={profileImg} alt='Profile' />
+          <button onClick={handleProfileOptions}>
+            <img src={profileImg} alt='Profile' />
+          </button>
         </div>
       </HeaderMain>
     </Container>

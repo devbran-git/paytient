@@ -1,16 +1,16 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
 
   padding: 0 1.5rem;
 
   div {
 
     &.cards-wrapper {
-      width: 14.5rem;
+      width: 100%;
       height: 10rem;
 
       padding: 1.3rem 1.12rem 0.5rem;
@@ -28,7 +28,7 @@ export const Container = styled.div`
     p.value {
       font-size: 1.9rem;
       font-weight: 800;
-      letter-spacing: -1.46px;
+      letter-spacing: -0.09rem;
       text-align: center;
 
         span {

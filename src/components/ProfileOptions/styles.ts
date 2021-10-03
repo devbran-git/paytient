@@ -25,7 +25,7 @@ nav {
   font-weight: 600;
   
   a {
-    padding: 0.8rem 1.18rem;
+    padding: 0.7rem 1.18rem;
     text-decoration: none;
     border-bottom: 1px solid var(--divider);
     
