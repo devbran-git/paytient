@@ -59,6 +59,13 @@ export function Summary() {
           <FaRegUser className='lead-icon' />
           <p>Leads</p>
         </div>
+
+        <p className='value'>1347</p>
+
+        <div className='card-footer'>
+          <FaSortUp className='sortup-icon' />
+          <p>2.73%</p>
+        </div>
       </div>
     </Container>
   )
